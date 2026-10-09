@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Resource Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Student Resource Hub</h1>
+    <p>A simple guide to student learning and activities.</p>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#resources">Resources</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+
+    <section class="intro">
+      <h2>Welcome, Students!</h2>
+      <p>Discover resources and activities to help you learn.</p>
+      <a class="button" href="#resources">Explore Resources</a>
+    </section>
+
+    <section id="resources">
+      <h2>Learning Resources</h2>
+
+      <div class="resource-grid">
+        <article class="card">
+          <h3>Study Guides</h3>
+          <p>Review lessons and organize your notes.</p>
+        </article>
+
+        <article class="card">
+          <h3>Creative Projects</h3>
+          <p>Explore ideas and develop creative skills.</p>
+        </article>
+
+        <article class="card">
+          <h3>Student Activities</h3>
+          <p>Discover activities you can participate in.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="schedule">
+      <h2>Activity Schedule</h2>
+
+      <div class="table-wrapper">
+        <table>
+          <caption>Sample Student Activity Schedule</caption>
+          <thead>
+            <tr>
+              <th scope="col">Activity</th>
+              <th scope="col">Day</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Study Session</td>
+              <td>Monday</td>
+              <td>Library</td>
+            </tr>
+            <tr>
+              <td>Art Workshop</td>
+              <td>Wednesday</td>
+              <td>Art Room</td>
+            </tr>
+            <tr>
+              <td>Group Discussion</td>
+              <td>Friday</td>
+              <td>Classroom</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Send a Suggestion</h2>
+      <p>Tell us what activity you would like to see.</p>
+
+      <form action="#contact" method="get">
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="">Choose a category</option>
+            <option value="study">Study resources</option>
+            <option value="art">Art activities</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your suggestion</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Resource Hub</p>
+  </footer>
+
+</body>
+</html>
