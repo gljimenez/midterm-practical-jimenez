@@ -1,0 +1,270 @@
+/* COLORS */
+:root {
+  --blue: #2563eb;
+  --dark-blue: #172554;
+  --yellow: #ffdc4a;
+  --light-blue: #f3f8ff;
+  --white: #ffffff;
+}
+
+/* PAGE */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--dark-blue);
+  background-color: var(--light-blue);
+  background-image: radial-gradient(#b9d0f5 1px, transparent 1px);
+  background-size: 22px 22px;
+  font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+/* HEADER AND NAVIGATION */
+header {
+  position: relative;
+  overflow: hidden;
+  padding: 32px 16px;
+  color: var(--white);
+  text-align: center;
+  background: linear-gradient(120deg, #1744a2, #397df4, #66d8ff);
+  border-bottom: 8px solid var(--yellow);
+}
+
+header::before,
+header::after {
+  position: absolute;
+  color: var(--yellow);
+  font-size: 48px;
+}
+
+header::before {
+  top: 8px;
+  left: 8%;
+  content: "★";
+}
+
+header::after {
+  right: 8%;
+  bottom: 8px;
+  content: "☆";
+}
+
+header h1 {
+  color: var(--yellow);
+}
+
+header p {
+  color: #e9f1ff;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+nav a {
+  padding: 8px 16px;
+  color: var(--white);
+  text-decoration: none;
+  background: #1744a2;
+  border: 1px solid var(--white);
+  border-radius: 20px;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--dark-blue);
+  background: var(--yellow);
+}
+
+/* MAIN CONTENT */
+main {
+  width: calc(100% - 32px);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 24px 0;
+  scroll-margin-top: 16px;
+}
+
+section > h2 {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--white);
+  border: 2px solid #b9d0f5;
+  border-radius: 14px;
+}
+
+.intro {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.intro h2 {
+  background: #fff1ad;
+  border-color: var(--yellow);
+}
+
+.intro p,
+#contact > p {
+  color: #52627d;
+}
+
+/* BUTTONS */
+.button,
+button {
+  display: inline-block;
+  padding: 8px 24px;
+  color: var(--dark-blue);
+  background: var(--yellow);
+  border: 2px solid #f2c62f;
+  border-radius: 16px;
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus,
+button:hover,
+button:focus {
+  color: var(--white);
+  background: var(--blue);
+}
+
+/* RESOURCE CARDS */
+.resource-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.card {
+  padding: 24px;
+  background: var(--white);
+  border: 2px solid #b9d0f5;
+  border-top: 5px solid var(--blue);
+  border-radius: 20px;
+}
+
+.card:hover {
+  border-top-color: var(--yellow);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #1744a2;
+}
+
+/* SCHEDULE TABLE */
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+}
+
+caption {
+  padding: 8px;
+  text-align: left;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 16px;
+  text-align: left;
+  border: 1px solid #b9d0f5;
+}
+
+th {
+  color: var(--white);
+  background: var(--blue);
+}
+
+tbody tr:nth-child(even) {
+  background: #f0f5ff;
+}
+
+/* SUGGESTION FORM */
+form {
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  color: var(--dark-blue);
+  background: var(--white);
+  border: 2px solid #b9d0f5;
+  border-radius: 12px;
+  font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #76e4ff;
+}
+
+/* FOOTER */
+footer {
+  padding: 24px 16px;
+  color: var(--white);
+  text-align: center;
+  background: linear-gradient(120deg, #1744a2, #397df4, #66d8ff);
+  border-top: 8px solid var(--yellow);
+}
+
+/* SMALL-SCREEN FRIENDLY LAYOUT */
+@media (min-width: 600px) {
+  .resource-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    padding: 48px 24px;
+  }
+}
+
+@media (min-width: 900px) {
+  .resource-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+}
